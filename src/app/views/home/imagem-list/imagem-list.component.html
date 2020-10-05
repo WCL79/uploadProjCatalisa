@@ -1,0 +1,48 @@
+<mat-tab-group style="padding-top: 40px; padding-left: 15%; padding-right: 15%;">
+    <mat-tab label="RETONAR">
+        <div fxLayout="row" fxLayoutAlign="start center" style="padding: 2%;">
+            <ng-container  *ngFor="let i of imagemVista"      style="margin: 0,5;">
+
+
+              <mat-card class="mat-card-image" 
+              fxFlex="0 1 calc(10% - 11px)"
+              fxFlex.lt-md="0 1 calc(50% - 11px)"
+              fxFlex.lt-sm="100%">
+               
+                
+                    <mat-card-title class="mat-card-title-image">
+                      <di class="row">
+                        <p>
+                          <span style="font-size:0.9rem;" fxFlex="70" fxLayoutAlign="start center">{{i.thumbnailUrl}}</span>
+                          <span fxFlex></span>
+                          <!--<span style="font-size:1.0rem;" fxFlex="25" fxLayoutAlign="end center">{{i.id}}</span>-->
+                        </p>
+                          <p>
+                            <b>
+                              Titulo: <span style="font-size:1.6rem;">{{i.title}}</span><br><br>
+                              Código: <span style="font-size:1.6rem;">{{i.id}}</span>
+                            </b>
+                          </p>
+                      </di>
+                      
+                    </mat-card-title>
+                    <mat-card-content fxLayoutAlign="center center">
+                      Todas essas imagens são do site: https://placeholder.com/ cujo intento de simulação de dados importados através da API do mesmo.
+                      <p>
+                        <img [attr.src]="i.url"> 
+                      </p>
+                        
+                        
+                    
+                    </mat-card-content> 
+                  </mat-card>
+                  <mat-card-actions>
+                    <button mat-button>GOSTOU?</button>
+                    <button mat-button>COMPARTILHE!</button>
+                  </mat-card-actions>
+                </ng-container>
+        </div>
+    </mat-tab>
+
+    <mat-tab label="PRÓXIMA">CONT2</mat-tab>
+  </mat-tab-group>
